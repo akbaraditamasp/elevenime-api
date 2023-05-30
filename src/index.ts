@@ -1,5 +1,5 @@
 import getOngoing from "./get-ongoing";
 import getLatest from "./get-latest";
-import searchAnime from "./search-anime";
+import search from "./search";
 
-export { getOngoing, getLatest, searchAnime };
+export { getOngoing, getLatest, search };

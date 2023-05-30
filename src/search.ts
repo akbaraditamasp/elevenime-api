@@ -8,9 +8,7 @@ interface SearchAnime {
   rating: number;
 }
 
-export default async function searchAnime(
-  query: string
-): Promise<SearchAnime[]> {
+export default async function search(query: string): Promise<SearchAnime[]> {
   let content: CheerioAPI;
 
   try {
