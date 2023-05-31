@@ -1,6 +1,6 @@
 {
   "name": "elevenime-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API for anime streaming service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.2.5",
     "typescript": "^5.0.4"
   },
   "dependencies": {
