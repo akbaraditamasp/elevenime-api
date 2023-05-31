@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getVideo = exports.getGenre = exports.animeInfo = exports.search = exports.getLatest = exports.getOngoing = void 0;
+const get_ongoing_1 = require("./get-ongoing");
+exports.getOngoing = get_ongoing_1.default;
+const get_latest_1 = require("./get-latest");
+exports.getLatest = get_latest_1.default;
+const search_1 = require("./search");
+exports.search = search_1.default;
+const anime_info_1 = require("./anime-info");
+exports.animeInfo = anime_info_1.default;
+const get_genre_1 = require("./get-genre");
+exports.getGenre = get_genre_1.default;
+const video_1 = require("./video");
+exports.getVideo = video_1.default;
