@@ -2,11 +2,25 @@ import { Cheerio, CheerioAPI, load } from "cheerio";
 import { client } from "./client";
 import { Anime } from ".";
 
-export default async function getOngoing(): Promise<Anime[]> {
+interface GenreOptions {
+  page?: number;
+  id: string;
+}
+
+export default async function getGenre({
+  page = 1,
+  id,
+}: GenreOptions): Promise<Anime[]> {
   let content: CheerioAPI;
 
   try {
-    const response = await client.get("/");
+    let url = `/genre/${id}`;
+    if (page !== 1) {
+      url = `/genre/${id}/page/${page}`;
+    }
+
+    const response = await client.get(url);
+
     content = load(response.data);
   } catch (e) {
     throw new Error(e);
