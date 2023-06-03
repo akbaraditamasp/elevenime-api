@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const cheerio_1 = require("cheerio");
 const client_1 = require("./client");
+const FormData = require("form-data");
 const getEmbedded = (id, nume) => __awaiter(void 0, void 0, void 0, function* () {
     const form = new FormData();
     form.append("action", "player_ajax");
