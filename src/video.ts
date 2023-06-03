@@ -1,5 +1,6 @@
-import { Cheerio, CheerioAPI, load } from "cheerio";
+import { CheerioAPI, load } from "cheerio";
 import { client } from "./client";
+import * as FormData from "form-data";
 
 interface EmbeddedVideo {
   server: string;
