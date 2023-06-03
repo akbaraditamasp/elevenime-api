@@ -19,6 +19,10 @@ export default async function getOngoing(): Promise<Anime[]> {
       .attr("href")
       .match(/https:\/\/samehadaku\.day\/anime\/(.*)\//);
 
+    if (!id) {
+      return null;
+    }
+
     return {
       id: id[1],
       title: content(el).find(".title").text().trim(),
